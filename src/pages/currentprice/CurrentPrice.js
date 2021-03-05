@@ -1,11 +1,13 @@
+import React from 'react'
 import { useState } from 'react'
 
 const CurrentPrice = () => {
     
-    const [assetSymbol, setAssetSymbol] = useState('');
-    const [currentPrice, setCurrentPrice] = useState(-1);
-    const [currentTime, setAssetSymbol] = useState('');
-
+    const [currentData, setCurrentData] = useState({
+        assetSymbol: '',
+        currentPrice: -1,
+        currentTime: ''
+    })
 
     const getCurrentPrice = async () => {
         const res = await fetch("https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/pricing/current",
@@ -16,16 +18,24 @@ const CurrentPrice = () => {
             }
         }
         )
-        const data = res.json()
+        const data = await res.json()
         const date = new Date(data['timestamp']*1000)
-        setAssetSymbol(data['assetSymbol'])
-        setCurrentPrice(data['price']);
-        setCurrentTime(date);
+        const newobject = {
+            assetSymbol: data['assetSymbol'],
+            currentPrice: data['price'],
+            currentTime: date
+        }
+        setCurrentData(newobject);
+        // setAssetSymbol(data['assetSymbol'])
+        // console.log(data['price'])
+        // setCurrentPrice(data['price']);
+        // setCurrentTime(date);
     }
 
     return (
         <div>
-            <p>The price of {assetSymbol} is {currentPrice} as of {currentTime}</p>
+            <p>{"The current for " + currentData['assetSymbol'] + " price is " + currentData['currentPrice'] + " as of " + currentData['currentTime'] }</p>
+            <button onClick = {()=>{getCurrentPrice(    )}}>Update price</button>
         </div>
     )
 }
