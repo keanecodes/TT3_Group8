@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Table from "react-bootstrap/Table";
+import jwt_decode from "jwt-decode"
 
 const Transaction = () => {
     const [transactions, setTransactions] = useState([]);
+    const[accountKey, setAccountKey] = useState("");
+
+    var token = sessionStorage.getItem("token");
+    const decoded = jwt_decode(token);
+
+    useEffect(()=>{
+    setAccountKey(decoded.user.accountKey)
+    },[decoded.user.accountKey])
 
     useEffect(() =>{
         const requestOptions = {

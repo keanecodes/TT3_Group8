@@ -13,7 +13,7 @@ export default function WalletBalance() {
 
     useEffect(()=>{
     setAccountKey(decoded.user.accountKey)
-    })
+    },[decoded.user.accountKey])
   
 
     const fetchBal = () => {
