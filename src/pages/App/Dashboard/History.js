@@ -49,7 +49,7 @@ const History = () => {
             <tr key={history.timestamp}>
                 <th>{history.price}</th>
                 <th>{history.assetSymbol}</th>
-                <th>{history.timestamp}</th>
+                <th>{Date(history.timestamp)}</th>
 
             </tr>
             ))}
