@@ -35,7 +35,7 @@ export let routes = [
     layout: "/app"
   },
   {
-    path: "/buySellAssets",
+    path: "/BuySellAssets",
     name: "Buy / Sell Assets",
     component: BuySellAssets,
     icon: "txn",
