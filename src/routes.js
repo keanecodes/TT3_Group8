@@ -2,7 +2,7 @@
 import Dashboard from "pages/App/Dashboard/Dashboard";
 import Balance from "pages/App/Dashboard/Balance"
 import Transaction from "pages/App/Dashboard/Transaction";
-import BuySellAssets from "pages/App/Dashboard/BuySellAssets";
+import BuySellAssets from "pages/App/Dashboard/buySellAssets";
 
 import CurrentPrice from "pages/currentprice/CurrentPrice";
 //React to create Routes here instead of in layouts to avoid repeating codes

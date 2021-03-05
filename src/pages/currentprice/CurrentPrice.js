@@ -1,13 +1,9 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const CurrentPrice = () => {
     
-    const [currentData, setCurrentData] = useState({
-        assetSymbol: 'NOT LOADED (Press button below)',
-        currentPrice: -1,
-        currentTime:  ''
-    })
+    const [currentData, setCurrentData] = useState({})
 
     const getCurrentPrice = async () => {
         const res = await fetch("https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/pricing/current",
@@ -32,10 +28,18 @@ const CurrentPrice = () => {
         // setCurrentTime(date);
     }
 
+    useEffect(() =>{
+        getCurrentPrice();
+        setInterval(getCurrentPrice, 5000);
+    },
+    [])
+
     return (
         <div>
-            <p>{"The current for " + currentData['assetSymbol'] + " price is " + currentData['currentPrice'] + " as of " + currentData['currentTime'] }</p>
-            <button onClick = {()=>{getCurrentPrice(    )}}>Update price</button>
+            <h3>Current price information (will refresh perodically)</h3>
+            {Object.keys(currentData).length === 0 ? <p>Not loaded yet; press button below</p> :
+            <p>{"The current for " + currentData['assetSymbol'] + " price is " + currentData['currentPrice'] + " as of " + currentData['currentTime'] }</p>}    
+
         </div>
     )
 }
