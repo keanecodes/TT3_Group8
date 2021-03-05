@@ -5,7 +5,7 @@ import Transaction from "pages/App/Dashboard/Transaction";
 
 import UserDetails from "pages/UserDetails/UserDetails";
 
-import BuySellAssets from "pages/App/Dashboard/buySellAssets";
+import BuySellAssets from "pages/App/Dashboard/BuySellAssets";
 
 import CurrentPrice from "pages/currentprice/CurrentPrice";
 
@@ -38,7 +38,7 @@ export let routes = [
     layout: "/app"
   },
   {
-    path: "/buySellAssets",
+    path: "/BuySellAssets",
     name: "Buy / Sell Assets",
     component: BuySellAssets,
     icon: "txn",
