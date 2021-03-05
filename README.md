@@ -10,8 +10,8 @@ You are tasked with developing an exchange portal where a user can trade a digit
 | View Current Asset Price | Basic | Yuan Long | √ | √ | 
 | View Historical Asset Price | Basic | Sean | √ | √
 | View Txn History | Basic | Alex | √ | √ | 
-| View Cash & Asset Balance | Basic | Akshay | √ | √ | 
 | Buy/Sell Asset | Basic | Alex | √ | √ | 
+| View Cash & Asset Balance | Basic | Akshay | √ | √ | 
 | Graph on Historical Asset Price | Advanced | - | x | -
 | Set Target Price to automate buy/sell asset | Advanced | - | x | -
 | Data Viz w/ Charts | Advanced | - | x | -
@@ -19,7 +19,7 @@ You are tasked with developing an exchange portal where a user can trade a digit
 | Password Salting | Advanced | - | x | -
 | Host backend servers and/or databases | Technical Depth (Optional) | - | x | -
 | Deploy to AWS/GCP | Technical Depth (Optional) | - |  x | -
-
+Note: If there's any miss, please feel free to update.
 
 ## Sample Page
 
