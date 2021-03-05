@@ -2,9 +2,6 @@
 import Dashboard from "pages/App/Dashboard/Dashboard";
 import Balance from "pages/App/Dashboard/Balance"
 import Transaction from "pages/App/Dashboard/Transaction";
-
-
-
 import BuySellAssets from "pages/App/Dashboard/BuySellAssets";
 
 import CurrentPrice from "pages/currentprice/CurrentPrice";

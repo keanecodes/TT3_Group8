@@ -1,3 +1,17 @@
+# Please make the .env File
+```sh
+cd TT3_Group8
+touch .env
+```
+paste in these lines in the file
+```sh
+REACT_APP_API_KEY = "4fLNtutUxi797l5cazMtm4z6FEEwCWm57NjjCvxP"
+REACT_APP_API_BASE_URL = "http://localhost:8080/https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek"
+```
+```sh
+npm i && npm start
+```
+
 # ReactJS
 ```sh
 git clone https://github.com/keanecodes/TT3_Group8.git
