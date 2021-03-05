@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import Container from "react-bootstrap/Container";
+import { useRecoilValue } from 'recoil'
+import { userAuth } from 'recoil/users'
 
 const schema = yup.object().shape({
     accountKey: yup.string()
@@ -18,6 +20,7 @@ const BuySellAssets = () => {
     resolver: yupResolver(schema)
   });
   const [isError, setIsError] = useState(false);
+  const auth = useRecoilValue(userAuth)
 
   const onSubmit = async (data) => { 
     console.log(data);
@@ -32,7 +35,7 @@ const BuySellAssets = () => {
           'x-api-key': '4fLNtutUxi797l5cazMtm4z6FEEwCWm57NjjCvxP',
         },
         body: JSON.stringify({
-            "accountKey": data.accountKey,
+            "accountKey": auth.user?.accountKey,
             "orderType": data.orderType,
             "assetAmount": data.assetAmount,
         }),
@@ -50,13 +53,13 @@ const BuySellAssets = () => {
         <Container className="d-flex justify-content-center">
           <form onSubmit={handleSubmit(onSubmit)} onReset={reset}>
 
-            <div className="form-row">
+            {/* <div className="form-row">
               <div className="form-group col">
                 <label>Account Key:</label>
                 <input name="accountKey" type="text" ref={register} className={`form-control ${errors.accountKey ? 'is-invalid' : ''}`} />
                 <div className="invalid-feedback">{errors.accountKey?.message}</div>
               </div>
-            </div>
+            </div> */}
 
             <div className="form-row">
               <div className="form-group col">
