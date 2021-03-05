@@ -2,6 +2,7 @@
 import Login from "pages/Bridge/Auth/Login";
 //Dashboard routes
 import Dashboard from "pages/App/Dashboard/Dashboard";
+import History from "pages/App/Dashboard/History"
 
 //React to create Routes here instead of in layouts to avoid repeating codes
 import React from 'react'
@@ -25,6 +26,13 @@ export let routes = [
     path: "/transactions",
     name: "Transactions",
     component: null,
+    icon: "txn",
+    layout: "/app"
+  },
+  {
+    path: "/history",
+    name: "History",
+    component: History,
     icon: "txn",
     layout: "/app"
   }
