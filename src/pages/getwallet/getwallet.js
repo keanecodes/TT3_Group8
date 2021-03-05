@@ -7,7 +7,8 @@ const CurrentWallet = () => {
         {
             method: "POST",
             headers:{
-                'x-api-key': '4fLNtutUxi797l5cazMtm4z6FEEwCWm57NjjCvxP'
+                'x-api-key': '4fLNtutUxi797l5cazMtm4z6FEEwCWm57NjjCvxP',
+                'accountKey': '5e12aec7-1447-46a2-b1f6-b588514e4123'
             }
         }
         )
