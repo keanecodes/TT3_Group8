@@ -29,17 +29,6 @@ export let routes = [
     icon: "txn",
     layout: "/app"
   },
-<<<<<<< HEAD
-  {
-    path: "/UserDetails",
-    name: "User Details",
-    component: Transaction,
-    icon: "txn",
-    layout: "/app"
-  },
-
-=======
->>>>>>> 4bd9b44f06d20914f26e30679790a7f5d5e16a5d
 ];
 
 export const getRoutes = layoutPath => {
