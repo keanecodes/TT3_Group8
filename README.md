@@ -19,6 +19,7 @@ You are tasked with developing an exchange portal where a user can trade a digit
 | Password Salting | Advanced | - | x | -
 | Host backend servers and/or databases | Technical Depth (Optional) | - | x | -
 | Deploy to AWS/GCP | Technical Depth (Optional) | - |  x | -
+
 Note: If there's any miss, please feel free to update.
 
 ## Sample Page
@@ -69,4 +70,5 @@ npm i && npm start
 * Open communication on issues
 * Help from teammates is often just a sharescreen away
 * Great ICs to lighten the mood
+
 (to be updated if any)
