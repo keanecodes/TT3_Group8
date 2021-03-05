@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Table from "react-bootstrap/Table";
+import './table.css';
 import { useRecoilValue } from 'recoil'
 import { userAuth } from 'recoil/users'
 
@@ -47,7 +48,7 @@ const History = () => {
             </tr>
           </thead>
 
-          <tbody>
+          <tbody >
             { historical.map(history => (
             <tr key={history.timestamp}>
                 <th>{history.price}</th>

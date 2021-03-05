@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, {useState} from 'react'
+import './balance.css'
 import { useRecoilValue } from 'recoil'
 import { userAuth } from 'recoil/users'
 
@@ -33,10 +34,10 @@ export default function WalletBalance() {
     return (
         <div>
             <div>
-                <div>
+                <div className="Viewwallet">
                     Asset Balance: {assetBalance}
                 </div>
-                <div>
+                <div className="Viewwallet">
                     Cash Balance: {cashBalance}
                 </div>
                 <div>
