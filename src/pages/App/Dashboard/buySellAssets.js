@@ -1,18 +1,11 @@
-import React from 'react';
-import Container from "react-bootstrap/Container"
+import React, { useState } from 'react';
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
+import Container from "react-bootstrap/Container";
 
 const buySellAssets = () => {
-    return(
-      <Container className="d-flex flex-column text-center">
-  
-          <h1>Welcome User!</h1>
-          <h2 className="text-center">  What do you want to do today?</h2>
-          <br />
-          <br />
-  
-              
-      </Container>
-  )
+
   }
   
   export default buySellAssets;
