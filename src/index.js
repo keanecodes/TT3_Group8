@@ -14,6 +14,7 @@ import AppLayout from "./pages/App/AppLayout"
 // Data & State Management
 import axios from 'axios'
 import { RecoilRoot } from 'recoil';
+
 axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
 const hist = createBrowserHistory();
 
