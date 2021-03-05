@@ -13,7 +13,7 @@ export default function WalletBalance() {
         {headers: {
             'Content-Type': 'application/json;charset=UTF-8',
             // "Access-Control-Allow-Origin": "*",
-            "X-Api-key": "4fLNtutUxi797l5cazMtm4z6FEEwCWm57NjjCvxP"}})
+            "x-api-key": "4fLNtutUxi797l5cazMtm4z6FEEwCWm57NjjCvxP"}})
         .then((response) => {
             console.log(response.data);
             setAssetBalance(response.data.assetBalance);
