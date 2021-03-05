@@ -3,10 +3,12 @@ import Login from "pages/Bridge/Auth/Login";
 //Dashboard routes
 import Dashboard from "pages/App/Dashboard/Dashboard";
 import Transaction from "pages/App/Dashboard/Transaction";
-
+import UserDetails from "pages/UserDetails/UserDetails";
 //React to create Routes here instead of in layouts to avoid repeating codes
 import React from 'react'
 import { Route } from "react-router-dom";
+import Login1 from 'pages/App/Dashboard/Login';
+import History from 'pages/App/Dashboard/History';
 
 export let routes = [
   {
@@ -26,6 +28,20 @@ export let routes = [
     path: "/transaction",
     name: "Past Transactions",
     component: Transaction,
+    icon: "txn",
+    layout: "/app"
+  },
+  {
+    path: "/Login1",
+    name: "logining",
+    component: Login1,
+    icon: "txn",
+    layout: "/app"
+  },
+  {
+    path: "/history",
+    name: "logining",
+    component: History,
     icon: "txn",
     layout: "/app"
   },
