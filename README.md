@@ -5,7 +5,7 @@ You are tasked with developing an exchange portal where a user can trade a digit
 | Task |  Level | Assignee  |  Completed? | During Hackathon?
 | ---- | :----: | :-: | :---------: | :-:|
 | Login - Frontend API Call | Basic | Keane | √ | √ | 
-| Login - Self-Signed JWT | Basic | Wayne | √ | √ | 
+| Login - JWT Session Storage | Basic | Wayne | √ | √ | 
 | View User info | Basic | Keane | √ | √ | 
 | View Current Asset Price | Basic | Yuan Long | √ | √ | 
 | View Historical Asset Price | Basic | Sean | √ | √
