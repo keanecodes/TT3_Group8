@@ -1,21 +1,14 @@
-//User routes
-import Login from "pages/Bridge/Auth/Login";
 //Dashboard routes
 import Dashboard from "pages/App/Dashboard/Dashboard";
 import Transaction from "pages/App/Dashboard/Transaction";
 import BuySellAssets from "pages/App/Dashboard/BuySellAssets";
 
+import CurrentPrice from "pages/currentprice/CurrentPrice";
 //React to create Routes here instead of in layouts to avoid repeating codes
 import React from 'react'
 import { Route } from "react-router-dom";
 
 export let routes = [
-  {
-    path: "/login",
-    name: "Login",
-    component: Login,
-    layout: "/user"
-  },
   {
     path: "/dashboard",
     name: "Dashboard",
@@ -31,10 +24,18 @@ export let routes = [
     layout: "/app"
   },
   {
+  {
     path: "/buysellassets",
     name: "Buy / Sell Assets",
     component: BuySellAssets,
     icon: "txn",
+    layout: "/app"
+  },
+  {
+    path: "/currentprice",
+    name: "CurrentPrice",
+    component: CurrentPrice,
+    icon: "home",
     layout: "/app"
   },
 ];
