@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Table from "react-bootstrap/Table";
-import './table.css';
 import { useRecoilValue } from 'recoil'
 import { userAuth } from 'recoil/users'
 
@@ -53,7 +52,7 @@ const History = () => {
             <tr key={history.timestamp}>
                 <th>{history.price}</th>
                 <th>{history.assetSymbol}</th>
-                <th>{Date(history.timestamp)}</th>
+                <th>{history.timestamp}</th>
 
             </tr>
             ))}
