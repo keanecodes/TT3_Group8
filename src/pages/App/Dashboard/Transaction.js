@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Table from "react-bootstrap/Table"
+import Table from "react-bootstrap/Table";
 
 const Transaction = () => {
     const [transactions, setTransactions] = useState([]);
