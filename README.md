@@ -5,13 +5,13 @@ You are tasked with developing an exchange portal where a user can trade a digit
 | Task |  Level | Assignee  |  Completed? | During Hackathon?
 | ---- | :----: | :-: | :---------: | :-:|
 | Login - Frontend API Call | Basic | Keane | √ | √ | 
-| Login - Self-Signed JWT | Basic | Wayne | √ | √ | 
+| Login - JWT Session Storage | Basic | Wayne | √ | √ | 
 | View User info | Basic | Keane | √ | √ | 
 | View Current Asset Price | Basic | Yuan Long | √ | √ | 
 | View Historical Asset Price | Basic | Sean | √ | √
 | View Txn History | Basic | Alex | √ | √ | 
-| View Cash & Asset Balance | Basic | Akshay | √ | √ | 
 | Buy/Sell Asset | Basic | Alex | √ | √ | 
+| View Cash & Asset Balance | Basic | Akshay | √ | √ | 
 | Graph on Historical Asset Price | Advanced | - | x | -
 | Set Target Price to automate buy/sell asset | Advanced | - | x | -
 | Data Viz w/ Charts | Advanced | - | x | -
@@ -19,9 +19,9 @@ You are tasked with developing an exchange portal where a user can trade a digit
 | Password Salting | Advanced | - | x | -
 | Host backend servers and/or databases | Technical Depth (Optional) | - | x | -
 | Deploy to AWS/GCP | Technical Depth (Optional) | - |  x | -
+Note: If there's any miss, please feel free to update.
 
-
-
+## Sample Page
 
 ![Login Page](https://raw.githubusercontent.com/keanecodes/TT3_Group8/main/src/assets/sample-view-login.jpg)
 
@@ -69,3 +69,4 @@ npm i && npm start
 * Open communication on issues
 * Help from teammates is often just a sharescreen away
 * Great ICs to lighten the mood
+(to be updated if any)
