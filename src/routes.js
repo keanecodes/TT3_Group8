@@ -3,7 +3,7 @@ import Dashboard from "pages/App/Dashboard/Dashboard";
 import Balance from "pages/App/Dashboard/Balance"
 import Transaction from "pages/App/Dashboard/Transaction";
 
-import UserDetails from "pages/UserDetails/UserDetails";
+
 
 import BuySellAssets from "pages/App/Dashboard/BuySellAssets";
 
@@ -12,7 +12,7 @@ import CurrentPrice from "pages/currentprice/CurrentPrice";
 //React to create Routes here instead of in layouts to avoid repeating codes
 import React from 'react'
 import { Route } from "react-router-dom";
-import Login1 from 'pages/App/Dashboard/Login';
+// import Login1 from 'pages/App/Dashboard/Login';
 import History from 'pages/App/Dashboard/History';
 
 export let routes = [
@@ -30,13 +30,13 @@ export let routes = [
     icon: "txn",
     layout: "/app"
   },
-  {
-    path: "/Login1",
-    name: "logining",
-    component: Login1,
-    icon: "txn",
-    layout: "/app"
-  },
+//   {
+//     path: "/Login1",
+//     name: "logining",
+//     component: Login1,
+//     icon: "txn",
+//     layout: "/app"
+//   },
   {
     path: "/BuySellAssets",
     name: "Buy / Sell Assets",

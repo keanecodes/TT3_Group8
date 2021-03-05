@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Table from "react-bootstrap/Table";
 
-const url = 'https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek'
+// const url = 'https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek'
 
 
 const History = () => {
