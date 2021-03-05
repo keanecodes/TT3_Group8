@@ -12,14 +12,34 @@ import { formValuesState, userAuth, login } from 'recoil/users'
 
 export default function Login({history}) {
   // const formValues = useRecoilValue(formValuesState)
+  
   const setUserAuth = useSetRecoilState(userAuth)
 
+  const requestOptions = {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': '4fLNtutUxi797l5cazMtm4z6FEEwCWm57NjjCvxP'
+    },
+    // body: values
+};
   const handleSubmit = async values => {
-    console.log('Received values of form: ', values);
-    const data = await login(values);
+    requestOptions['body'] = {"username": "Group8",
+    "password": "cDTeVIWCMlJm7Uo"}
 
-    console.log(data)
-    if (data) {
+    console.log(requestOptions);
+  
+    const data = await fetch("http://localhost:8080/https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/transactions/login", requestOptions);
+    const transactions = await data.json();
+    console.log(transactions);
+    // setTransactions(transactions);
+  
+  
+    // console.log('Received values of form: ', values);
+    // const data = await login(values);
+
+    // console.log(data)
+    // if (data) {
       // state
       // setUserAuth({
       //   isAuthenticated: true,
@@ -29,7 +49,7 @@ export default function Login({history}) {
       // redirect to dashboard
       // history.push(routes.user.dashboard)
       // history.push('/app/dashboard');
-    }
+    // }
   };
   
   return (

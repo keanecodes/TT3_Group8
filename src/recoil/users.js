@@ -51,17 +51,28 @@ export const userAuth = atom({
 
 
 export const login = userData => {
-  
   const reqBody = {
-    email: userData.email,
+    username: userData.username,
     password: userData.password
   }
-  axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+  
+  const requestOptions = {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': '4fLNtutUxi797l5cazMtm4z6FEEwCWm57NjjCvxP'
+    },
+    body: reqBody
+  }
+  console.log(reqBody)
 
   return axios
-    .post('/login', {headers: {
-      'x-api-key': process.env.REACT_APP_API_KEY
-    }}, reqBody)
+    .post('/login', 
+    {headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': '4fLNtutUxi797l5cazMtm4z6FEEwCWm57NjjCvxP'
+    }}, 
+    {body: reqBody})
     .then(res => {
       // setAuthorizationHeader(res.data.token)
       // return getUserData()
