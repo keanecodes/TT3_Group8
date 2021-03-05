@@ -28,13 +28,13 @@ const Transaction = () => {
         <Table responsive striped bordered hover size="sm">
           <thead>
             <tr>
-                <th>transactionId</th>
-                <th>orderType</th>
-                <th>timestamp</th>
-                <th>assetSymbol</th>
-                <th>assetAmount</th>
-                <th>assetPrice</th>
-                <th>cashAmount</th>
+                <th>Transaction Id</th>
+                <th>Order Type</th>
+                <th>Timestamp</th>
+                <th>Asset Symbol</th>
+                <th>Asset Amount</th>
+                <th>Asset Price</th>
+                <th>Cash Amount</th>
             </tr>
           </thead>
 
