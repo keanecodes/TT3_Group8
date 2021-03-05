@@ -1,12 +1,18 @@
 import React from 'react';
+import Container from "react-bootstrap/Container"
 
+const Dashboard = () => {
+  return(
+    <Container className="d-flex flex-column text-center">
 
-function Dashboard() {
-  return (
-    <div className="dashboard__container">
-      this is an app i am very very very very long
-    </div>
-  );
+        <h1>Welcome User!</h1>
+        <h2 className="text-center">  What do you want to do today?</h2>
+        <br />
+        <br />
+
+            
+    </Container>
+)
 }
 
 export default Dashboard;
