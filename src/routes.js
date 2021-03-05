@@ -1,13 +1,13 @@
 //Dashboard routes
 import Dashboard from "pages/App/Dashboard/Dashboard";
 import Transaction from "pages/App/Dashboard/Transaction";
-<<<<<<< HEAD
+
 import UserDetails from "pages/UserDetails/UserDetails";
-=======
-import BuySellAssets from "pages/App/Dashboard/BuySellAssets";
+
+import BuySellAssets from "pages/App/Dashboard/buySellAssets";
 
 import CurrentPrice from "pages/currentprice/CurrentPrice";
->>>>>>> eccac64f138b557aeec77d415c20e5f78221e1ba
+
 //React to create Routes here instead of in layouts to avoid repeating codes
 import React from 'react'
 import { Route } from "react-router-dom";
@@ -30,30 +30,31 @@ export let routes = [
     layout: "/app"
   },
   {
-<<<<<<< HEAD
     path: "/Login1",
     name: "logining",
     component: Login1,
-=======
-    path: "/buysellassets",
-    name: "Buy / Sell Assets",
-    component: BuySellAssets,
->>>>>>> eccac64f138b557aeec77d415c20e5f78221e1ba
     icon: "txn",
     layout: "/app"
   },
   {
-<<<<<<< HEAD
+    path: "/buySellAssets",
+    name: "Buy / Sell Assets",
+    component: BuySellAssets,
+    icon: "txn",
+    layout: "/app"
+  },
+  {
     path: "/history",
-    name: "logining",
+    name: "History",
     component: History,
     icon: "txn",
-=======
+    layout: "/app"
+  },
+  {
     path: "/currentprice",
     name: "CurrentPrice",
     component: CurrentPrice,
     icon: "home",
->>>>>>> eccac64f138b557aeec77d415c20e5f78221e1ba
     layout: "/app"
   },
 ];

@@ -29,6 +29,11 @@ const History = () => {
     }, [])
 
     // const date = new Date(data['timestamp']*1000)
+    // const dates = ["2018-09-12", "2018-10-18", "2018-12-30"];
+    // const filteredDates = dates.filter(d => new Date(d) - new Date() > 0);
+    // events = events.filter(a => new Date(a.startDate) - new Date > 0);
+
+    
     return(
         <Table responsive striped bordered hover size="sm">
           <thead>
