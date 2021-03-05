@@ -1,9 +1,12 @@
 import { useState } from 'react'
 
 const CurrentPrice = () => {
-    // default to -1
+    
+    const [assetSymbol, setAssetSymbol] = useState('');
     const [currentPrice, setCurrentPrice] = useState(-1);
-    // this works put not sure how to pass the data out of function
+    const [currentTime, setAssetSymbol] = useState('');
+
+
     const getCurrentPrice = async () => {
         const res = await fetch("https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/pricing/current",
         {
@@ -14,12 +17,15 @@ const CurrentPrice = () => {
         }
         )
         const data = res.json()
-        setCurrentPrice(data['price'])
+        const date = new Date(data['timestamp']*1000)
+        setAssetSymbol(data['assetSymbol'])
+        setCurrentPrice(data['price']);
+        setCurrentTime(date);
     }
 
     return (
         <div>
-            <p>{currentPrice}</p>
+            <p>The price of {assetSymbol} is {currentPrice} as of {currentTime}</p>
         </div>
     )
 }
