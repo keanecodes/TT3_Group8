@@ -1,0 +1,118 @@
+@import '~antd/dist/antd.css';
+@import '~antd-mobile/dist/antd-mobile.css';  
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+  --body-500: rgba(0, 0, 0, 0.87);
+  --body-400: rgba(0, 0, 0, 0.74);
+  --body-300: rgba(0, 0, 0, 0.54);
+  --body-200: rgba(0, 0, 0, 0.26);
+  --body-100: rgba(0, 0, 0, 0.04);
+  --theme-color-divider: #DDE3E7;
+  --theme-color-app-background: #F5F7F9;
+  --theme-color-primary: #FF3E3E;
+  --theme-color-primary-text: #172733;
+  --theme-color-tertiary-text: #6F7981;
+}
+
+@media screen and (max-width: 500px) {
+  /*disable scrolling*/
+  html, body {margin: 0; height: 100%; overflow: hidden}
+}
+
+body {
+  /* background: #172633 radial-gradient(var(--body-500), var(--body-100)); */
+  background: linear-gradient(#FFFFFF 30%, var(--theme-color-app-background) 80%);
+  margin: 0;
+  font-family: 'Noto Sans SC', "Roboto", "Helvetica Neue", "Segoe UI", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.ant-input {
+  /* border-radius: 25px; */
+  padding: 20px;
+  border: 2px solid transparent;
+  margin: 5px 0; /*top-5px bottom-0*/
+}
+
+.ant-input::placeholder {
+  color: var(--theme-color-tertiary-text);
+}
+
+.ant-input-affix-wrapper {
+  border-radius: 0.65rem;
+  border: 2px solid transparent;
+}
+
+.ant-input-affix-wrapper:hover {
+  border-width: 2px;
+  border: 2px solid var(--theme-color-divider);
+}
+
+.ant-input-affix-wrapper:focus {
+  border: 2px solid var(--theme-color-divider);
+}
+
+.ant-input-affix-wrapper::placeholder {
+  color:var(--theme-color-tertiary-text);
+}
+
+.ant-btn {
+  border-radius: 0.65rem;
+  border: 1px solid white;
+  color: var(--theme-color-primary);
+}
+
+.ant-btn-primary {
+  background-color: var(--theme-color-primary);
+  border: 1px solid var(--theme-color-primary);
+  color: white;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background-color: var(--theme-color-primary);
+  border: 1px solid white;
+  color: white;
+}
+
+.ant-btn-primary:focus {
+  border: 1px solid white;
+  color: white;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus,
+.ant-btn-primary:active {
+  opacity: 0.9;
+  border: none;
+}
+
+.ant-btn-link,
+.ant-btn-link:hover,
+.ant-btn-link:focus {
+  border:none;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.AppLayout {
+  display: flex;
+}
