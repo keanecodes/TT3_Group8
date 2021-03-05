@@ -29,7 +29,8 @@ const CurrentPrice = () => {
     }
 
     useEffect(() =>{
-        setInterval(getCurrentPrice, 5000)
+        getCurrentPrice();
+        setInterval(getCurrentPrice, 5000);
     },
     [])
 
@@ -38,7 +39,7 @@ const CurrentPrice = () => {
             <h3>Current price information (will refresh perodically)</h3>
             {Object.keys(currentData).length === 0 ? <p>Not loaded yet; press button below</p> :
             <p>{"The current for " + currentData['assetSymbol'] + " price is " + currentData['currentPrice'] + " as of " + currentData['currentTime'] }</p>}    
-            <button onClick = {()=>{getCurrentPrice()}}>Update price now</button>
+
         </div>
     )
 }
