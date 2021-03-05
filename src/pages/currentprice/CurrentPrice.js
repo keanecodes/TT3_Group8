@@ -4,9 +4,9 @@ import { useState } from 'react'
 const CurrentPrice = () => {
     
     const [currentData, setCurrentData] = useState({
-        assetSymbol: '',
+        assetSymbol: 'NOT LOADED (Press button below)',
         currentPrice: -1,
-        currentTime: ''
+        currentTime:  ''
     })
 
     const getCurrentPrice = async () => {
