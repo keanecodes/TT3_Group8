@@ -1,3 +1,10 @@
+# Please make the .env File
+```sh
+cd TT3_Group8
+touch .env
+npm i && npm start
+```
+
 # ReactJS
 ```sh
 git clone https://github.com/keanecodes/TT3_Group8.git
