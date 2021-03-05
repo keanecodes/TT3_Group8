@@ -18,7 +18,7 @@ const UserDetails = () => {
         //console.log(data)
         return data
     }
-}
+
 
     return (
         <div>
