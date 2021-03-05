@@ -28,7 +28,7 @@ const History = () => {
         fetchHistory();
     }, [])
 
-    const date = new Date(data['timestamp']*1000)
+    // const date = new Date(data['timestamp']*1000)
     return(
         <Table responsive striped bordered hover size="sm">
           <thead>
@@ -44,7 +44,7 @@ const History = () => {
             <tr key={history.timestamp}>
                 <th>{history.price}</th>
                 <th>{history.assetSymbol}</th>
-                <th>{history.timestamp }</th>
+                <th>{history.timestamp}</th>
 
             </tr>
             ))}
