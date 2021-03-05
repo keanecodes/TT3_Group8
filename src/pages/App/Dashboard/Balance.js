@@ -1,14 +1,19 @@
 import axios from 'axios'
 import React, {useState} from 'react'
+import { useRecoilValue } from 'recoil'
+import { userAuth } from 'recoil/users'
+
 
 export default function WalletBalance() {
 
     const[assetBalance, setAssetBalance] = useState ("");
     const[cashBalance, setCashBalance] = useState("");
+    const auth = useRecoilValue(userAuth)
+
 
     const fetchBal = () => {
         axios.post('https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/balance', {
-            accountKey: "5e12aec7-1447-46a2-b1f6-b588514e4123"
+            accountKey: auth.user?.accountKey
         }, 
         {headers: {
             'Content-Type': 'application/json;charset=UTF-8',

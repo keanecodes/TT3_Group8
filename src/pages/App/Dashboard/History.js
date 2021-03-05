@@ -1,12 +1,15 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Table from "react-bootstrap/Table";
+import { useRecoilValue } from 'recoil'
+import { userAuth } from 'recoil/users'
 
 // const url = 'https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek'
 
 
 const History = () => {
     const [historical, setHistory] = useState([]);
+    const auth = useRecoilValue(userAuth)
 
     useEffect(() =>{
         const requestOptions = {
@@ -16,7 +19,7 @@ const History = () => {
                 'x-api-key': '4fLNtutUxi797l5cazMtm4z6FEEwCWm57NjjCvxP'
             },
             body: JSON.stringify({
-                'accountKey': '5e12aec7-1447-46a2-b1f6-b588514e4123'
+                'accountKey': auth.user?.accountKey
             })
         };
         const fetchHistory = async() => {
