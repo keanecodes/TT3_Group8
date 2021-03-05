@@ -27,6 +27,8 @@ const History = () => {
         };
         fetchHistory();
     }, [])
+
+    const date = new Date(data['timestamp']*1000)
     return(
         <Table responsive striped bordered hover size="sm">
           <thead>
