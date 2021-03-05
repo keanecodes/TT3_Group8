@@ -3,7 +3,7 @@ import Login from "pages/Bridge/Auth/Login";
 //Dashboard routes
 import Dashboard from "pages/App/Dashboard/Dashboard";
 import Transaction from "pages/App/Dashboard/Transaction";
-import buySellAssets from "pages/App/Dashboard/buySellAssets";
+import BuySellAssets from "pages/App/Dashboard/BuySellAssets";
 
 //React to create Routes here instead of in layouts to avoid repeating codes
 import React from 'react'
@@ -33,7 +33,7 @@ export let routes = [
   {
     path: "/buysellassets",
     name: "Buy / Sell Assets",
-    component: buySellAssets,
+    component: BuySellAssets,
     icon: "txn",
     layout: "/app"
   },
