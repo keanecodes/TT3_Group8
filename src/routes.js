@@ -1,5 +1,6 @@
 //Dashboard routes
 import Dashboard from "pages/App/Dashboard/Dashboard";
+import Balance from "pages/App/Dashboard/Balance"
 import Transaction from "pages/App/Dashboard/Transaction";
 
 import UserDetails from "pages/UserDetails/UserDetails";
@@ -47,6 +48,14 @@ export let routes = [
     path: "/history",
     name: "History",
     component: History,
+    icon: "txn",
+    layout: "/app"
+    
+  },
+  {
+    path: "/balance",
+    name: "View Wallet Balance",
+    component: Balance,
     icon: "txn",
     layout: "/app"
   },
