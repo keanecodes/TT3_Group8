@@ -7,24 +7,44 @@ import { ReactComponent as BackDrop1 } from "assets/undraw_to_the_moon_v1mv.svg"
 import { ReactComponent as BackDrop2 } from "assets/dbs-star.svg";
 import { ReactComponent as DBSLogo } from "assets/dbs_logo.svg";
 
-export default function Login() {
-  const handleSubmit = values => {
-    console.log('Received values of form: ', values);
+import { useSetRecoilState } from 'recoil';
+import { userAuth, login } from 'recoil/users'
+
+export default function Login({history}) {
+  // const formValues = useRecoilValue(formValuesState)
+  
+  const setUserAuth = useSetRecoilState(userAuth)
+
+  const handleSubmit = async values => {
+    // console.log('Received values of form: ', values);
+    const data = await login(values);
+
+    console.log(data)
+    if (data) {
+      // state
+      setUserAuth({
+        isAuthenticated: true,
+        user: data
+      })
+
+      // redirect to dashboard
+      history.push('/app/dashboard');
+    }
   };
   
   return (
     <>
         <div className="Auth">
-          <DBSLogo className=".auth-decor auth-backdrop-logo" />
-          <BackDrop1 className=".auth-decor auth-backdrop1" />
-          <BackDrop2 className=".auth-decor auth-backdrop2" />
+          <DBSLogo className="auth-decor auth-backdrop-logo" />
+          <BackDrop1 className="auth-decor auth-backdrop1" />
+          <BackDrop2 className="auth-decor auth-backdrop2" />
           <div className="login-box">
             <Form onFinish={handleSubmit} className="login-form">
               <div className="login-fields-wrapper">
                 <Logo className="logo-icon" />
                 <div className="fields-box">
                   <Form.Item
-                    name="email"
+                    name="username"
                     rules={[
                       { required: true, message: "Please input your username" },
                       // { type: 'email', message: "The input is not valid E-mail" }
