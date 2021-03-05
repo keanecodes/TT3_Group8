@@ -21,11 +21,40 @@ const UserDetails = () => {
 
 
     return (
-        <div>
-            <p>{getUserDetails()}</p>
-        </div>
+
+        <Table responsive striped bordered hover size="sm">
+            <thead>
+            <tr>
+                <th>Phone Num</th>
+                <th>Last Name</th>
+                <th>Username</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>First Name</th>
+                <th>Nric</th>
+            </tr>
+            </thead>
+
+            {/* <tbody>
+            { transactions.map(transaction => (
+            <tr key={transaction.transactionId}>
+                <th>{transaction.transactionId}</th>
+                <th>{transaction.orderType}</th>
+                <th>{transaction.timestamp}</th>
+                <th>{transaction.assetSymbol}</th>
+                <th>{transaction.assetAmount}</th>
+                <th>${transaction.assetPrice}</th>
+                <th>${transaction.cashAmount}</th>
+            </tr>
+            ))}
+            </tbody> */}
+        </Table>
     )
 }
+            <p>{getUserDetails()}</p>
+        // </div>
+    
+
 
 
 export default UserDetails;
