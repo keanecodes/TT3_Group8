@@ -11,6 +11,8 @@ import React from 'react'
 import { Route } from "react-router-dom";
 // import Login1 from 'pages/App/Dashboard/Login';
 import History from 'pages/App/Dashboard/History';
+import logo from './img/DBSLogo.png'; 
+
 
 export let routes = [
   {
@@ -67,6 +69,7 @@ export let routes = [
 
 export const getRoutes = layoutPath => {
   return routes.map((prop, key) => {
+    // <img src = {logo} alt = "DBS Logo" className = "logo" ></img>
     if (prop.collapse) {
       return this.getRoutes(prop.views);
     }

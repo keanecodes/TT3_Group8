@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Table from "react-bootstrap/Table";
-
+import './table.css';
 // const url = 'https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek'
 
 
@@ -44,12 +44,12 @@ const History = () => {
             </tr>
           </thead>
 
-          <tbody>
+          <tbody >
             { historical.map(history => (
             <tr key={history.timestamp}>
-                <th>{history.price}</th>
-                <th>{history.assetSymbol}</th>
-                <th>{history.timestamp}</th>
+                <td>{history.price}</td>
+                <td>{history.assetSymbol}</td>
+                <td>{history.timestamp}</td>
 
             </tr>
             ))}

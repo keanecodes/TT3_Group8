@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, {useState} from 'react'
-
+import './balance.css'
 export default function WalletBalance() {
 
     const[assetBalance, setAssetBalance] = useState ("");
@@ -28,10 +28,10 @@ export default function WalletBalance() {
     return (
         <div>
             <div>
-                <div>
+                <div className="Viewwallet">
                     Asset Balance: {assetBalance}
                 </div>
-                <div>
+                <div className="Viewwallet">
                     Cash Balance: {cashBalance}
                 </div>
                 <div>
