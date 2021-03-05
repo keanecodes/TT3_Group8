@@ -58,7 +58,7 @@ export let routes = [
   },
   {
     path: "/currentprice",
-    name: "CurrentPrice",
+    name: "View Current Price",
     component: CurrentPrice,
     icon: "home",
     layout: "/app"
