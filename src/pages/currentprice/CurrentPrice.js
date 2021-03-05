@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const CurrentPrice = () => {
     
@@ -32,10 +32,16 @@ const CurrentPrice = () => {
         // setCurrentTime(date);
     }
 
+    useEffect(() =>{
+        setInterval(getCurrentPrice, 5000)
+    },
+    [])
+
     return (
         <div>
+            <h3>Current price information (will refresh every 5 sec)    </h3>
             <p>{"The current for " + currentData['assetSymbol'] + " price is " + currentData['currentPrice'] + " as of " + currentData['currentTime'] }</p>
-            <button onClick = {()=>{getCurrentPrice(    )}}>Update price</button>
+            <button onClick = {()=>{getCurrentPrice()}}>Update price now</button>
         </div>
     )
 }
