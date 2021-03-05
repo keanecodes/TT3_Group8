@@ -43,7 +43,7 @@ const Transaction = () => {
             <tr key={transaction.transactionId}>
                 <th>{transaction.transactionId}</th>
                 <th>{transaction.orderType}</th>
-                <th>{transaction.timestamp}</th>
+                <th>{Date(transaction.timestamp*1000)}</th>
                 <th>{transaction.assetSymbol}</th>
                 <th>{transaction.assetAmount}</th>
                 <th>${transaction.assetPrice}</th>
