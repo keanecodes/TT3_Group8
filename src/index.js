@@ -1,7 +1,7 @@
 // Framework
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch, Redirect } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import * as serviceWorker from './serviceWorker';
 
@@ -36,6 +36,7 @@ ReactDOM.render(
             }}
           />
         </Switch>
+        <Route render={() => <Redirect to="/" />} />
       </Router>
     </RecoilRoot>
   // </React.StrictMode>,

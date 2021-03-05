@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Table from "react-bootstrap/Table";
+import { useRecoilValue } from 'recoil'
+import { userAuth } from 'recoil/users'
 
 const Transaction = () => {
     const [transactions, setTransactions] = useState([]);
+    const auth = useRecoilValue(userAuth)
 
     useEffect(() =>{
         const requestOptions = {
@@ -12,7 +15,7 @@ const Transaction = () => {
                 'x-api-key': '4fLNtutUxi797l5cazMtm4z6FEEwCWm57NjjCvxP'
             },
             body: JSON.stringify({
-                'accountKey': '5e12aec7-1447-46a2-b1f6-b588514e4123'
+                'accountKey': auth.user?.accountKey
             })
         };
         const fetchTransactions = async() => {
@@ -43,7 +46,7 @@ const Transaction = () => {
             <tr key={transaction.transactionId}>
                 <th>{transaction.transactionId}</th>
                 <th>{transaction.orderType}</th>
-                <th>{Date(transaction.timestamp*1000)}</th>
+                <th>{transaction.timestamp}</th>
                 <th>{transaction.assetSymbol}</th>
                 <th>{transaction.assetAmount}</th>
                 <th>${transaction.assetPrice}</th>

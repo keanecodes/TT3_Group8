@@ -9,8 +9,10 @@ import CurrentPrice from "pages/currentprice/CurrentPrice";
 //React to create Routes here instead of in layouts to avoid repeating codes
 import React from 'react'
 import { Route } from "react-router-dom";
-import Login1 from 'pages/App/Dashboard/Login';
+// import Login1 from 'pages/App/Dashboard/Login';
 import History from 'pages/App/Dashboard/History';
+import logo from './img/DBSLogo.png'; 
+
 
 export let routes = [
   {
@@ -27,13 +29,13 @@ export let routes = [
     icon: "txn",
     layout: "/app"
   },
-  {
-    path: "/Login1",
-    name: "logining",
-    component: Login1,
-    icon: "txn",
-    layout: "/app"
-  },
+//   {
+//     path: "/Login1",
+//     name: "logining",
+//     component: Login1,
+//     icon: "txn",
+//     layout: "/app"
+//   },
   {
     path: "/BuySellAssets",
     name: "Buy / Sell Assets",
@@ -67,6 +69,7 @@ export let routes = [
 
 export const getRoutes = layoutPath => {
   return routes.map((prop, key) => {
+    // <img src = {logo} alt = "DBS Logo" className = "logo" ></img>
     if (prop.collapse) {
       return this.getRoutes(prop.views);
     }
