@@ -24,18 +24,11 @@ export let routes = [
   },
   {
     path: "/transaction",
-    name: "Transaction",
+    name: "Past Transactions",
     component: Transaction,
     icon: "txn",
     layout: "/app"
   },
-  // {
-  //   path: "/pastTransactions",
-  //   name: "Past Transactions",
-  //   component: null,
-  //   icon: "txn",
-  //   layout: "/app"
-  // }
 ];
 
 export const getRoutes = layoutPath => {

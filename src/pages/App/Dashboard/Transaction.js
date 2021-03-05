@@ -12,7 +12,7 @@ const Transaction = () => {
                 'x-api-key': '4fLNtutUxi797l5cazMtm4z6FEEwCWm57NjjCvxP'
             },
             body: JSON.stringify({
-                'accountKey': 'cDTeVIWCMlJm7Uo 4fLNtutUxi797l5cazMtm4z6FEEwCWm57NjjCvxP'
+                'accountKey': '5e12aec7-1447-46a2-b1f6-b588514e4123'
             })
         };
         const fetchTransactions = async() => {
@@ -40,14 +40,14 @@ const Transaction = () => {
 
           <tbody>
             { transactions.map(transaction => (
-            <tr key={transaction.dateTime}>
+            <tr key={transaction.transactionId}>
                 <th>{transaction.transactionId}</th>
                 <th>{transaction.orderType}</th>
-                <th>${transaction.timestamp}</th>
+                <th>{transaction.timestamp}</th>
                 <th>{transaction.assetSymbol}</th>
                 <th>{transaction.assetAmount}</th>
-                <th>{transaction.assetPrice}</th>
-                <th>{transaction.cashAmount}</th>
+                <th>${transaction.assetPrice}</th>
+                <th>${transaction.cashAmount}</th>
             </tr>
             ))}
           </tbody>
