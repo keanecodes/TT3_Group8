@@ -35,7 +35,7 @@ const BuySellAssets = () => {
           'x-api-key': '4fLNtutUxi797l5cazMtm4z6FEEwCWm57NjjCvxP',
         },
         body: JSON.stringify({
-            "accountKey": auth.user?.accountKey,
+            "accountKey": data.accountKey,
             "orderType": data.orderType,
             "assetAmount": data.assetAmount,
         }),
@@ -49,17 +49,17 @@ const BuySellAssets = () => {
 
   return (
       <div>
-        <h1 className="text-center">Make Payments</h1>
+        <h1 className="text-center">Buy and Sell Asset</h1>
         <Container className="d-flex justify-content-center">
           <form onSubmit={handleSubmit(onSubmit)} onReset={reset}>
 
-            {/* <div className="form-row">
+            <div className="form-row">
               <div className="form-group col">
                 <label>Account Key:</label>
                 <input name="accountKey" type="text" ref={register} className={`form-control ${errors.accountKey ? 'is-invalid' : ''}`} />
                 <div className="invalid-feedback">{errors.accountKey?.message}</div>
               </div>
-            </div> */}
+            </div>
 
             <div className="form-row">
               <div className="form-group col">
@@ -72,7 +72,7 @@ const BuySellAssets = () => {
             <div className="form-row">
               <div className="form-group col">
                 <label>Asset Amount:</label>
-                <input name="assetAmount" type="number" ref={register} className={`form-control ${errors.assetAmount ? 'is-invalid' : ''}`} />
+                <input name="assetAmount" type="number" step="0.01" ref={register} className={`form-control ${errors.assetAmount ? 'is-invalid' : ''}`} />
                 <div className="invalid-feedback">{errors.assetAmount?.message}</div>
               </div>
             </div>

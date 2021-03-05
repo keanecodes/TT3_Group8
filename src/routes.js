@@ -51,7 +51,7 @@ export let routes = [
   },
   {
     path: "/balance",
-    name: "View Wallet Balance",
+    name: "Wallet Balance",
     component: Balance,
     icon: "txn",
     layout: "/app"
