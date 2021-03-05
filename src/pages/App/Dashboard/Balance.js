@@ -6,7 +6,7 @@ export default function WalletBalance() {
     const[assetBalance, setAssetBalance] = useState ("");
     const[cashBalance, setCashBalance] = useState("");
 
-    const fetchbal = () => {
+    const fetchBal = () => {
         axios.post('https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/balance', {
             accountKey: "5e12aec7-1447-46a2-b1f6-b588514e4123"
         }, 
@@ -25,12 +25,18 @@ export default function WalletBalance() {
     };
 
     
-
     return (
         <div>
-            <div>{assetBalance}<br/>
-            {cashBalance}
-            <button onClick= {fetchbal}>Fetch Balance</button>
+            <div>
+                <div>
+                    {assetBalance}
+                </div>
+                <div>
+                    {cashBalance}
+                </div>
+                <div>
+                    <button onClick= {fetchBal}>Fetch Balance</button>
+                </div>      
             </div>
         </div>
     )
