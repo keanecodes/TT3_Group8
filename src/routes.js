@@ -1,6 +1,7 @@
 //Dashboard routes
 import Dashboard from "pages/App/Dashboard/Dashboard";
 import Transaction from "pages/App/Dashboard/Transaction";
+import BuySellAssets from "pages/App/Dashboard/BuySellAssets";
 
 import CurrentPrice from "pages/currentprice/CurrentPrice";
 //React to create Routes here instead of in layouts to avoid repeating codes
@@ -19,6 +20,13 @@ export let routes = [
     path: "/transaction",
     name: "Past Transactions",
     component: Transaction,
+    icon: "txn",
+    layout: "/app"
+  },
+  {
+    path: "/buysellassets",
+    name: "Buy / Sell Assets",
+    component: BuySellAssets,
     icon: "txn",
     layout: "/app"
   },
