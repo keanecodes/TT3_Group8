@@ -29,10 +29,10 @@ export default function WalletBalance() {
         <div>
             <div>
                 <div>
-                    {assetBalance}
+                    Asset Balance: {assetBalance}
                 </div>
                 <div>
-                    {cashBalance}
+                    Cash Balance: {cashBalance}
                 </div>
                 <div>
                     <button onClick= {fetchBal}>Fetch Balance</button>
