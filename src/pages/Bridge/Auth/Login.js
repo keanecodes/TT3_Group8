@@ -7,49 +7,29 @@ import { ReactComponent as BackDrop1 } from "assets/undraw_to_the_moon_v1mv.svg"
 import { ReactComponent as BackDrop2 } from "assets/dbs-star.svg";
 import { ReactComponent as DBSLogo } from "assets/dbs_logo.svg";
 
-import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
-import { formValuesState, userAuth, login } from 'recoil/users'
+import { useSetRecoilState } from 'recoil';
+import { userAuth, login } from 'recoil/users'
 
 export default function Login({history}) {
   // const formValues = useRecoilValue(formValuesState)
   
   const setUserAuth = useSetRecoilState(userAuth)
 
-  const requestOptions = {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': '4fLNtutUxi797l5cazMtm4z6FEEwCWm57NjjCvxP'
-    },
-    // body: values
-};
   const handleSubmit = async values => {
-    requestOptions['body'] = {"username": "Group8",
-    "password": "cDTeVIWCMlJm7Uo"}
-
-    console.log(requestOptions);
-  
-    const data = await fetch("http://localhost:8080/https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/transactions/login", requestOptions);
-    const transactions = await data.json();
-    console.log(transactions);
-    // setTransactions(transactions);
-  
-  
     // console.log('Received values of form: ', values);
-    // const data = await login(values);
+    const data = await login(values);
 
-    // console.log(data)
-    // if (data) {
+    console.log(data)
+    if (data) {
       // state
-      // setUserAuth({
-      //   isAuthenticated: true,
-      //   user: data
-      // })
+      setUserAuth({
+        isAuthenticated: true,
+        user: data
+      })
 
       // redirect to dashboard
-      // history.push(routes.user.dashboard)
-      // history.push('/app/dashboard');
-    // }
+      history.push('/app/dashboard');
+    }
   };
   
   return (

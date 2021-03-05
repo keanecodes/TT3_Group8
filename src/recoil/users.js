@@ -2,14 +2,14 @@ import { atom } from 'recoil'
 import axios from 'axios'
 // import jwtDecode from "jwt-decode";
 
-export const formValuesState = atom({
-  key: 'formValuesState',
-  default: {
-    name: "",
-    email: "",
-    password: "",
-  }
-})
+// export const formValuesState = atom({
+//   key: 'formValuesState',
+//   default: {
+//     name: "",
+//     email: "",
+//     password: "",
+//   }
+// })
 
 const userAuthDefault = {
   isAuthenticated: false,
@@ -55,27 +55,20 @@ export const login = userData => {
     username: userData.username,
     password: userData.password
   }
-  
-  const requestOptions = {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': '4fLNtutUxi797l5cazMtm4z6FEEwCWm57NjjCvxP'
-    },
-    body: reqBody
-  }
+
   console.log(reqBody)
 
   return axios
-    .post('/login', 
-    {headers: {
+    .post('/login',  
+    reqBody,
+    {'headers': {
       'Content-Type': 'application/json',
       'x-api-key': '4fLNtutUxi797l5cazMtm4z6FEEwCWm57NjjCvxP'
-    }}, 
-    {body: reqBody})
+    }})
     .then(res => {
       // setAuthorizationHeader(res.data.token)
-      // return getUserData()
+      // console.log(res)
+      return res.data
 
     })
     .catch(err => {
