@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import { useState } from 'react'
 // import Button from '@material-ui/core/Button';
-
+import Table from "react-bootstrap/Table"
 
 const UserDetails = () => {
     const getUserDetails = async () => {
@@ -11,7 +11,8 @@ const UserDetails = () => {
             method: "POST",
             headers:{
                 'x-api-key': '4fLNtutUxi797l5cazMtm4z6FEEwCWm57NjjCvxP'
-            }
+            } Username: 'Group8',
+            Password: 'cDTeVIWCMlJm7Uo'
         }
         )
         const data = res.json()
