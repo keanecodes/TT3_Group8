@@ -1,14 +1,24 @@
 import axios from 'axios'
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
+import jwt_decode from "jwt-decode"
 
 export default function WalletBalance() {
 
     const[assetBalance, setAssetBalance] = useState ("");
     const[cashBalance, setCashBalance] = useState("");
+    const[accountKey, setAccountKey] = useState("");
+
+    var token = sessionStorage.getItem("token");
+    const decoded = jwt_decode(token);
+
+    useEffect(()=>{
+    setAccountKey(decoded.user.accountKey)
+    })
+  
 
     const fetchBal = () => {
         axios.post('https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/balance', {
-            accountKey: "5e12aec7-1447-46a2-b1f6-b588514e4123"
+            accountKey: accountKey
         }, 
         {headers: {
             'Content-Type': 'application/json;charset=UTF-8',
