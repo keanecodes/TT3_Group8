@@ -3,11 +3,7 @@ import { useState, useEffect } from 'react'
 
 const CurrentPrice = () => {
     
-    const [currentData, setCurrentData] = useState({
-        assetSymbol: 'NOT LOADED (Press button below)',
-        currentPrice: -1,
-        currentTime:  ''
-    })
+    const [currentData, setCurrentData] = useState({})
 
     const getCurrentPrice = async () => {
         const res = await fetch("https://849rs099m3.execute-api.ap-southeast-1.amazonaws.com/techtrek/pricing/current",
@@ -39,8 +35,9 @@ const CurrentPrice = () => {
 
     return (
         <div>
-            <h3>Current price information (will refresh every 5 sec)    </h3>
-            <p>{"The current for " + currentData['assetSymbol'] + " price is " + currentData['currentPrice'] + " as of " + currentData['currentTime'] }</p>
+            <h3>Current price information (will refresh perodically)</h3>
+            {Object.keys(currentData).length === 0 ? <p>Not loaded yet; press button below</p> :
+            <p>{"The current for " + currentData['assetSymbol'] + " price is " + currentData['currentPrice'] + " as of " + currentData['currentTime'] }</p>}    
             <button onClick = {()=>{getCurrentPrice()}}>Update price now</button>
         </div>
     )
